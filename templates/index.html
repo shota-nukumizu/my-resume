@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/format.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -18,6 +20,7 @@
     <title>Shota's Resume</title>
 </head>
 <body>
+
     <section id="header">
         <div class="container text-center">
             <div class="user-box">
@@ -26,6 +29,232 @@
               <p>現役で活躍する学生兼Pythonプログラマー</p>
             </div>
         </div>
+        <div class="scroll-btn">
+            <div class="scroll-bar">
+                <a href="#about"><span></span></a>
+            </div>
+        </div>
     </section>
+
+    <section id="user-info">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">Shota's Resume</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars" area-hidden="true"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#top">TOP PAGE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">製作者</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resume">経歴</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">事業内容</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">お問い合わせ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="about container" id="about">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img src="{{ url_for('static', filename='image/myicon.png') }}" class="profile-img">
+                </div>
+                <div class="col-md-6">
+                    <h3>サイト製作者：Shota</h3>
+                    <p>
+                        Pythonプログラマー。未経験でプログラミングを独学して8ヶ月経過している。WEBアプリ開発に興味があり、来年夏までにWeb開発の個人事業を
+                        立てることを目標に毎日勉強中。
+                    </p>
+
+                    <div class="skills-bar">
+                        <p>Django, Vue.jsを用いたWEBアプリ開発</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 30%;">30%</div>
+                        </div>
+
+                        <p>Django REST Frameworkを用いたAPI開発</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 10%;">10%</div>
+                        </div>
+
+                        <p>ブログ(ライティング)</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 20%;">20%</div>
+                        </div>
+
+                        <p>WEB制作</p>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 15%;">15%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <ul>
+                <a href="https://twitter.com/Nameless_SN"><li><i class="fab fa-twitter"></i></li></a>
+                <a href="https://shotanukumizu-1000.hatenablog.com/"><li><i class="fas fa-blog"></i></li></a>
+                <a href="https://github/shota-nukumizu.com"><li><i class="fab fa-github"></i></li></a>
+            </ul>
+        </div>
+
+        <div class="resume" id="resume">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="text-center">私の経歴</h3>
+                        <ul class="timeline">
+
+                            <li>
+                                <h4><span>現在 -</span> Djangoを中心にWEB開発に没頭</h4>
+                                <p>
+                                    Djangoをバックエンドとして、Vueと組み合わせてWEBアプリを開発。来年夏の個人事業設立に向けて必死に勉強中。
+                                    最近はDjango REST Frameworkを用いたAPI開発に興味がある。
+                                </p>
+                            </li>
+
+                            <li>
+                                <h4><span>2021/04/30 -</span> Twitterアカウント開設</h4>
+                                <p>
+                                    はてなブログの更新、プログラミングの基礎知識を中心に毎日情報発信中。2021年12月1日現在で、フォロワー数258
+                                </p>
+                            </li>
+
+                            <li>
+                                <h4><span>2021/04/01 -</span> はてなブログ(無料版)開設</h4>
+                                <p>
+                                    プログラミングやPython、アプリ開発を中心に毎日情報発信中。ブログは2021年10月にGoogle AdSenseで収益化成功。
+                                </p>
+                            </li>
+
+                            <li>
+                                <h4><span>2021/03/01 -</span> 大学2年の春休みにプログラミング独学開始</h4>
+                                <p>
+                                    業務自動化で仕事を効率化するためにPythonからスタートするものの、環境構築で挫折してしまう。
+                                </p>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <h3 class="text-center">私の学歴</h3>
+                        <ul class="timeline">
+
+                            <li>
+                                <h4><span>現在 -</span> 九州大学文学部人文学科3年 在学中</h4>
+                                <p>
+                                    大学では社会学を専攻。現在はアニメの社会学的考察に興味関心を持っている。2023年3月卒業見込み。<br>
+                                    <b>大学</b> - 九州大学文学部人文学科<br>
+                                    <b>期間</b> - 2019年4月～2023年3月<br>
+                                    <b>場所</b> - 福岡市西区
+                                </p>
+                            </li>
+                    
+                            <li>
+                                <h4><span>2019/03/01 -</span> 高校卒業</h4>
+                                <p>
+                                    大学を卒業後、自分の生まれ故郷を去る<br>
+                                    <b>高校</b> - 県立高鍋高等学校<br>
+                                    <b>期間</b> - 2016年4月～2019年3月<br>
+                                    <b>場所</b> - 宮崎県児湯郡
+                                </p>
+                            </li>
+                    
+                            <li>
+                                <h4><span>2016/03/16 -</span> 中学校卒業</h4>
+                                <p>
+                                    中学卒業後も自分の生まれ故郷に残る<br>
+                                    <b>中学</b> - 町立高鍋東中学校<br>
+                                    <b>学年</b> - 2013年4月～2016年3月<br>
+                                    <b>場所</b> - 宮崎県児湯郡
+                                </p>
+                            </li>
+                    
+                        </ul>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="text-center">事業内容</h1>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="services-box">
+                            <i class="fab fa-python" aria-hidden="true"></i><span>WEBアプリ開発</span>
+                            <p>主にDjango, REST Framework, VueやReactを用いたWEBアプリの開発を行います。</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="services-box">
+                            <i class="fas fa-laptop-code" aria-hidden="true"></i><span>WEBサイト制作(コーディング)</span>
+                            <p>HTML/CSS, JavaScriptを中心に簡単なWEB制作案件に応じます。</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="services-box">
+                            <i class="fas fa-blog" aria-hidden="true"></i><span>はてなブログ</span>
+                            <p>はてなブログでプログラミング, PythonやWEBアプリ開発に関する情報を発信しています。</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="contact" id="contact">
+            <div class="container text-center">
+                <h1>お問い合わせ</h1>
+                <p class="text-center">事業内容や案件に関するお問い合わせは私のTwitterのDM, あるいはメールでご連絡お願いします(TwitterのDMのほうが確認頻度が高いので、DMで連絡してくださると本当に助かります)</p>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="https://twitter.com/Nameless_SN"><i class="fab fa-twitter"></i></a>
+                        <p>@Nameless_SN</p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <i class="fas fa-envelope"></i>
+                        <p>author2000.1225@gmail.com</p>
+                    </div>
+                </div>
+
+                <a href="https://github.com/shota-nukumizu" class="btn btn-primary"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://twitter.com/Nameless_SN" class="btn btn-primary"><i class="fas fa-rocket"></i> 取引する</a>
+            </div>
+
+            <div class="footer text-center">
+                <p>Made with <i class="fa fa-heart-o"></i>by Shota Nukumizu. 2021</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+
 </body>
 </html>
