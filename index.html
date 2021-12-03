@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/format.css') }}">
+    <link rel="stylesheet" href="./static/css/format.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -24,9 +24,9 @@
     <section id="header">
         <div class="container text-center">
             <div class="user-box">
-              <img src="{{ url_for('static', filename='image/myicon.png') }}" alt="私のアイコン"> 
+              <img src="static/image/myicon.png" alt="私のアイコン"> 
               <h1>ショータ</h1>
-              <p>現役で活躍する学生兼Pythonプログラマー</p>
+              <p>駆け出しの学生プログラマー</p>
             </div>
         </div>
         <div class="scroll-btn">
@@ -69,7 +69,7 @@
         <div class="about container" id="about">
             <div class="row">
                 <div class="col-md-6 text-center">
-                    <img src="{{ url_for('static', filename='image/myicon.png') }}" class="profile-img">
+                    <img src="./static/image/myicon.png" class="profile-img">
                 </div>
                 <div class="col-md-6">
                     <h3>サイト製作者：Shota</h3>
@@ -152,36 +152,32 @@
                     </div>
 
                     <div class="col-md-6">
-                        <h3 class="text-center">私の学歴</h3>
+                        <h3 class="text-center">私の使っている言語, 趣味</h3>
                         <ul class="timeline">
 
                             <li>
-                                <h4><span>現在 -</span> 九州大学文学部人文学科3年 在学中</h4>
+                                <h4><span>言語 -</span> Python, JavaScript(Vue, Angular, React), TypeScript</h4>
                                 <p>
-                                    大学では社会学を専攻。現在はアニメの社会学的考察に興味関心を持っている。2023年3月卒業見込み。<br>
-                                    <b>大学</b> - 九州大学文学部人文学科<br>
-                                    <b>期間</b> - 2019年4月～2023年3月<br>
-                                    <b>場所</b> - 福岡市西区
+                                    PythonではDjangoを使った開発が得意。Djangoで簡単なWEBアプリやAPIを構築できる。
+                                    フロントエンドはJavaScript, 特にVueが得意。最近はAngularに興味を持っているが、
+                                    TypeScriptの開発に少し手を焼いている....
                                 </p>
                             </li>
                     
                             <li>
-                                <h4><span>2019/03/01 -</span> 高校卒業</h4>
+                                <h4><span>趣味 -</span> 読書</h4>
                                 <p>
-                                    大学を卒業後、自分の生まれ故郷を去る<br>
-                                    <b>高校</b> - 県立高鍋高等学校<br>
-                                    <b>期間</b> - 2016年4月～2019年3月<br>
-                                    <b>場所</b> - 宮崎県児湯郡
+                                    月に最低4冊本を読む。ブログで毎週日曜は本の要約記事を書いている。
+                                    紙で本は読まず、Amazon Kindleで読んでいる。
+                                    最近のおすすめの本は『最高の戦略教科書 孫子』。
                                 </p>
                             </li>
                     
                             <li>
-                                <h4><span>2016/03/16 -</span> 中学校卒業</h4>
+                                <h4><span>趣味-</span> アニメ鑑賞</h4>
                                 <p>
-                                    中学卒業後も自分の生まれ故郷に残る<br>
-                                    <b>中学</b> - 町立高鍋東中学校<br>
-                                    <b>学年</b> - 2013年4月～2016年3月<br>
-                                    <b>場所</b> - 宮崎県児湯郡
+                                    毎日最低30分間はアニメ鑑賞に費やす。<br>
+                                    最近オススメのアニメは『僕のヒーローアカデミア』。最も好きな作品は『鋼の錬金術師』。
                                 </p>
                             </li>
                     
@@ -249,12 +245,6 @@
             </div>
         </div>
     </section>
-
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
-
-    <script>
-        var scroll = new SmoothScroll('a[href*="#"]');
-    </script>
 
 </body>
 </html>
